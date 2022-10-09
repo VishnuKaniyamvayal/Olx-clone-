@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useContext} from 'react';
-import { FirebaseContext } from '../../store/FirebaseContext';
+import { FirebaseContext } from '../../store/Context';
 import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../olx-logo.png';
