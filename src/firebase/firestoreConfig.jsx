@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app'
-import 'firebase/firestore'
+import { getFirestore } from 'firebase/firestore'; 
 const firebaseConfig = {
     apiKey: "AIzaSyD2BbPWpcnh9yjDK9590yMtdAMF4WfSCBQ",
     authDomain: "olx-clone-7c9ba.firebaseapp.com",
@@ -10,4 +10,5 @@ const firebaseConfig = {
     measurementId: "G-SFMBCDGBRW"
   };
   const firebase=initializeApp(firebaseConfig)
-  export  default firebase
+  const db=getFirestore(firebase)
+  export  default db
