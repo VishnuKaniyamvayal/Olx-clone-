@@ -13,9 +13,8 @@ export default function Signup() {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [password, setPassword] = useState('')
-  const [isRedirect, setIsRedirect] = useState(false)
-  const {firebase} = useContext(FirebaseContext)
-  const handleSubmit = (e)=>{ e.preventDefault();console.log(firebase)
+  // const {firebase} = useContext(FirebaseContext)
+  const handleSubmit = (e)=>{ e.preventDefault();
   const auth=getAuth();
   createUserWithEmailAndPassword(auth,email,password).then((result=>{
     updateProfile(result.user,{displayName: username}).then(()=>{
@@ -90,7 +89,7 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        <a href='/login'>Login</a>
       </div>
     </div>
   );
