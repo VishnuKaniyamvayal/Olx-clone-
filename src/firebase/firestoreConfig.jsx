@@ -7,7 +7,8 @@ const firebaseConfig = {
     storageBucket: "olx-clone-7c9ba.appspot.com",
     messagingSenderId: "726050033587",
     appId: "1:726050033587:web:1e77e1f228eb4cec3985c6",
-    measurementId: "G-SFMBCDGBRW"
+    measurementId: "G-SFMBCDGBRW",
+    storageBucket: 'gs://olx-clone-7c9ba.appspot.com'
   };
   const firebase=initializeApp(firebaseConfig)
   const db=getFirestore(firebase)

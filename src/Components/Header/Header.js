@@ -16,7 +16,7 @@ function Header() {
     <div className="headerParentDiv">
       <div className="headerChildDiv">
         <div className="brandName">
-          <OlxLogo></OlxLogo>
+          <a onClick={()=>{navigate("/")}}><OlxLogo></OlxLogo></a>
         </div>
         <div className="placeSearch">
           <Search></Search>
@@ -48,10 +48,12 @@ function Header() {
          signOut(auth).then(()=>{navigate('/home')}) 
         }}>Logout</a>}
         <div className="sellMenu">
-          <SellButton></SellButton>
+          <SellButton onClick={()=>{
+            navigate('/create')
+          }}></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
-            <span>SELL</span>
+            <a onClick={()=>{navigate("/create")}}> SELL</a>
           </div>
         </div>
       </div>
